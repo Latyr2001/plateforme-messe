@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plate-forme de demandes de messe — Paroisse Épiphanie du Seigneur de Nianing</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="shell">
+
+  <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
+  <aside class="sidebar" id="sidebar">
+    <div class="brand">
+      <div class="brand-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c9973e" stroke-width="1.8"><path d="M12 2v20M7 7h10"/><path d="M4 20c1.5-3 4-4 8-4s6.5 1 8 4"/></svg>
+      </div>
+      <div class="brand-text">
+        <div class="name">Paroisse Épiphanie<br>du Seigneur de Nianing</div>
+      </div>
+    </div>
+    <div class="brand-motto">« Une seule foi, une seule famille »</div>
+    <nav class="nav" id="navList">
+      <div class="nav-item" data-view="accueil">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
+        Accueil
+      </div>
+      <div class="nav-item" data-view="nouvelle">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+        Nouvelle demande
+      </div>
+      <div class="nav-item" data-view="registre">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+        Registre des demandes
+      </div>
+      <div class="nav-item active" data-view="accueil">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M9 4v16"/></svg>
+        Intention de messe
+      </div>
+      <div class="nav-item" data-view="imprimer">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+        Imprimer aujourd'hui
+      </div>
+      <div class="nav-item" data-view="export">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+        Export PDF
+      </div>
+      <div class="nav-item" data-view="parametres">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.6 1.6 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.6 1.6 0 0 0-1.8-.3 1.6 1.6 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.6 1.6 0 0 0-1-1.5 1.6 1.6 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.6 1.6 0 0 0 .3-1.8 1.6 1.6 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.6 1.6 0 0 0 1.5-1 1.6 1.6 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.6 1.6 0 0 0 1.8.3H9a1.6 1.6 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.6 1.6 0 0 0 1 1.5 1.6 1.6 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.6 1.6 0 0 0-.3 1.8V9a1.6 1.6 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.6 1.6 0 0 0-1.5 1z"/></svg>
+        Paramètres
+      </div>
+    </nav>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <button class="hamburger" id="hamburgerBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+      <div class="topbar-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#c9973e" stroke-width="1.8"><path d="M12 2v20M7 7h10"/><path d="M4 20c1.5-3 4-4 8-4s6.5 1 8 4"/></svg>
+      </div>
+      <div class="topbar-text">
+        <h1>Plate-forme de demandes de messe</h1>
+        <p class="sub">Paroisse Épiphanie du Seigneur de Nianing</p>
+        <p class="tag">Prier ensemble, bâtir la communauté</p>
+      </div>
+      <div class="topbar-right">
+        <div class="avatar">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
+        </div>
+        <span>Admin</span>
+        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#fff" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
+      </div>
+    </div>
+
+    <div class="content">
+
+      <div class="view active" id="view-accueil">
+
+        <div class="hero-banner">
+          <div class="hero-banner-text">
+            <h2>Faire une demande de messe</h2>
+            <p>Confiez une intention à la prière de la communauté — un défunt, une action de grâce, une guérison, ou toute autre intention.</p>
+          </div>
+          <button class="btn btn-gold btn-hero" id="heroNewRequestBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+            Faire une demande de messe
+          </button>
+        </div>
+
+        <div class="stats-row">
+          <div class="stat-card">
+            <div class="stat-top">
+              <div class="stat-icon" style="background:var(--blue-bg)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--blue-ink)" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              </div>
+              <span class="stat-label">Total des demandes</span>
+            </div>
+            <div class="stat-value" id="statTotal">0</div>
+            <div class="stat-delta">↑ <b>12%</b> par rapport au mois dernier</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <div class="stat-icon" style="background:var(--green-bg)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--green-ink)" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg>
+              </div>
+              <span class="stat-label">Demandes en cours</span>
+            </div>
+            <div class="stat-value" id="statValidated">0</div>
+            <div class="stat-delta">↑ <b>5%</b> par rapport au mois dernier</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <div class="stat-icon" style="background:var(--purple-bg)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--purple-ink)" stroke-width="2"><circle cx="9" cy="8" r="3.2"/><path d="M2.5 20c0-3.5 3-5.5 6.5-5.5s6.5 2 6.5 5.5"/><path d="M16.5 9.5a3 3 0 1 0-1-5.8"/><path d="M21.5 20c0-2.6-1.6-4.4-4-5.1"/></svg>
+              </div>
+              <span class="stat-label">Reçues</span>
+            </div>
+            <div class="stat-value" id="statReceived">0</div>
+            <div class="stat-delta">↑ <b>3%</b> par rapport au mois dernier</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-top">
+              <div class="stat-icon" style="background:var(--amber-bg)">
+                <svg viewBox="0 0 24 24" fill="none" stroke="var(--amber-ink)" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+              </div>
+              <span class="stat-label">En attente</span>
+            </div>
+            <div class="stat-value" id="statPending">0</div>
+            <div class="stat-delta">↑ <b>2%</b> par rapport au mois dernier</div>
+          </div>
+
+          <div class="today-card">
+            <div class="lbl">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+              Aujourd'hui
+            </div>
+            <div class="val" id="todayLabel"></div>
+          </div>
+        </div>
+
+        <div class="panels">
+          <div class="panel">
+            <div class="panel-head">
+              <div class="panel-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+                Registre des demandes de messe
+              </div>
+              <div class="panel-actions">
+                <div class="search-box">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                  <input type="text" id="searchInput" placeholder="Rechercher une intention, un nom..">
+                </div>
+              </div>
+            </div>
+            <div style="padding:14px 18px 0; display:flex; align-items:center; gap:10px; flex-wrap:wrap; justify-content:flex-end;">
+              <select id="dashDateSelect"></select>
+              <button class="btn btn-primary" id="printAllBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                Imprimer — Feuille du prêtre
+              </button>
+            </div>
+            <div style="overflow-x:auto; margin-top:8px;">
+              <table>
+                <thead>
+                  <tr>
+                    <th>N°</th><th>Demandé par</th><th>Intention</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th>
+                  </tr>
+                </thead>
+                <tbody id="tableBody"></tbody>
+              </table>
+            </div>
+            <div class="info-note">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
+              <div>
+                La feuille pour le prêtre contient uniquement la colonne « Demandé par » et « Intention ».<br>
+                Elle peut être imprimée à tout moment pour la journée en cours.
+              </div>
+            </div>
+          </div>
+
+          <div class="panel">
+            <div class="panel-head" style="border-bottom:none;">
+              <div class="panel-title">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                Imprimer – Feuille du prêtre
+              </div>
+            </div>
+            <div class="print-panel-body" style="padding-top:0;">
+              <p>Sélectionnez la date pour imprimer la liste des intentions de messe (Demandé par en premier).</p>
+              <div class="field">
+                <label>Date</label>
+                <select id="sideDateSelect" style="width:100%;"></select>
+              </div>
+              <button class="btn btn-primary btn-full" id="printSideBtn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+                Imprimer
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <div class="preview-wrap">
+          <div class="preview-callout">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            </div>
+            <h3>Aperçu de la feuille à imprimer pour le prêtre</h3>
+            <div class="sub">(uniquement Demandé par et Intention)</div>
+            <div class="arrow">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+            </div>
+          </div>
+
+          <div class="sheet" id="printSheet">
+            <div class="sheet-head">
+              <div class="mark">
+                <svg viewBox="0 0 24 24" fill="none" stroke="#c9973e" stroke-width="1.8"><path d="M12 2v20M7 7h10"/><path d="M4 20c1.5-3 4-4 8-4s6.5 1 8 4"/></svg>
+              </div>
+              <div>
+                <div class="parish">Paroisse Épiphanie du Seigneur de Nianing</div>
+                <div class="motto">« Une seule foi, une seule famille »</div>
+              </div>
+            </div>
+            <h2 class="title">INTENTIONS DE MESSE</h2>
+            <div class="date" id="sheetDate"></div>
+            <table>
+              <thead><tr><th>N°</th><th>Demandé par</th><th>Intention</th></tr></thead>
+              <tbody id="sheetBody"></tbody>
+            </table>
+            <div class="footer-quote">Que ces intentions soient portées par la prière de toute la communauté !</div>
+            <div class="divider"><span class="ln"></span>✝<span class="ln"></span></div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="view" id="view-nouvelle">
+        <h2 class="page-title">Nouvelle demande de messe</h2>
+        <p class="page-sub">Enregistrez une nouvelle intention pour le registre de la paroisse.</p>
+        <div class="form-card">
+          <form id="newRequestForm">
+            <div class="form-grid">
+              <div class="fld"><label>Demandé par</label><input type="text" id="f_demandePar" placeholder="Nom du fidèle" required></div>
+              <div class="fld"><label>Date de messe souhaitée</label><input type="date" id="f_dateMesse" required></div>
+              <div class="fld full"><label>Intention</label><textarea id="f_intention" placeholder="Ex. Repos de l'âme de..." required></textarea></div>
+              <div class="fld"><label>Montant (FCFA)</label><input type="number" id="f_montant" placeholder="0" min="0" required></div>
+              <div class="fld"><label>État</label>
+                <select id="f_etat">
+                  <option value="En attente">En attente</option>
+                  <option value="Validée">Validée</option>
+                  <option value="Non validée">Non validée</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-actions">
+              <button type="button" class="btn btn-outline" id="cancelNewBtn">Annuler</button>
+              <button type="submit" class="btn btn-primary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8v8M8 12h8"/></svg>
+                Enregistrer la demande
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="view" id="view-registre">
+        <h2 class="page-title">Registre complet des demandes</h2>
+        <p class="page-sub">Toutes les demandes de messe enregistrées, toutes dates confondues.</p>
+        <div class="panel">
+          <div class="panel-head">
+            <div class="panel-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
+              Toutes les demandes
+            </div>
+            <div class="panel-actions">
+              <div class="search-box">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+                <input type="text" id="searchInputFull" placeholder="Rechercher une intention, un nom..">
+              </div>
+            </div>
+          </div>
+          <div style="overflow-x:auto;">
+            <table>
+              <thead>
+                <tr><th>N°</th><th>Demandé par</th><th>Intention</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th></tr>
+              </thead>
+              <tbody id="tableBodyFull"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <div class="view" id="view-imprimer">
+        <h2 class="page-title">Imprimer les intentions d'aujourd'hui</h2>
+        <p class="page-sub" id="todaySub"></p>
+        <div class="preview-wrap" style="margin-top:0;">
+          <div class="preview-callout">
+            <div class="ic">
+              <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
+            </div>
+            <h3>Feuille du jour</h3>
+            <div class="sub">Prête à imprimer pour le prêtre officiant.</div>
+            <button class="btn btn-gold btn-full" id="printTodayBtn" style="margin-top:14px;">Imprimer maintenant</button>
+          </div>
+          <div class="sheet" id="printSheetToday">
+            <div class="sheet-head">
+              <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#c9973e" stroke-width="1.8"><path d="M12 2v20M7 7h10"/><path d="M4 20c1.5-3 4-4 8-4s6.5 1 8 4"/></svg></div>
+              <div>
+                <div class="parish">Paroisse Épiphanie du Seigneur de Nianing</div>
+                <div class="motto">« Une seule foi, une seule famille »</div>
+              </div>
+            </div>
+            <h2 class="title">INTENTIONS DE MESSE</h2>
+            <div class="date" id="sheetDateToday"></div>
+            <table><thead><tr><th>N°</th><th>Demandé par</th><th>Intention</th></tr></thead><tbody id="sheetBodyToday"></tbody></table>
+            <div class="footer-quote">Que ces intentions soient portées par la prière de toute la communauté !</div>
+            <div class="divider"><span class="ln"></span>✝<span class="ln"></span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="view" id="view-export">
+        <h2 class="page-title">Export PDF</h2>
+        <p class="page-sub">Exportez le registre complet au format PDF (impression système).</p>
+        <div class="form-card">
+          <div class="fld" style="margin-bottom:16px;">
+            <label>Période</label>
+            <select id="exportRange">
+              <option value="all">Toutes les demandes</option>
+              <option value="validated">Demandes validées uniquement</option>
+              <option value="pending">Demandes en attente uniquement</option>
+            </select>
+          </div>
+          <button class="btn btn-primary" id="exportBtn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v12"/><path d="M7 10l5 5 5-5"/><path d="M4 20h16"/></svg>
+            Générer le PDF (impression)
+          </button>
+        </div>
+      </div>
+
+      <div class="view" id="view-parametres">
+        <h2 class="page-title">Paramètres</h2>
+        <p class="page-sub">Informations générales de la paroisse.</p>
+        <div class="form-card">
+          <div class="form-grid">
+            <div class="fld"><label>Nom de la paroisse</label><input type="text" value="Paroisse Épiphanie du Seigneur de Nianing"></div>
+            <div class="fld"><label>Devise</label><input type="text" value="« Une seule foi, une seule famille »"></div>
+            <div class="fld"><label>Montant par défaut (FCFA)</label><input type="number" value="1000"></div>
+            <div class="fld"><label>Nom de l'administrateur</label><input type="text" value="Admin"></div>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-primary" id="saveSettingsBtn">Enregistrer</button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="detailModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>Détail de la demande</h3>
+      <button class="modal-close" id="closeDetailModal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="modal-body" id="detailModalBody"></div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="editModal">
+  <div class="modal">
+    <div class="modal-head">
+      <h3>Modifier la demande</h3>
+      <button class="modal-close" id="closeEditModal"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg></button>
+    </div>
+    <div class="modal-body">
+      <form id="editForm">
+        <input type="hidden" id="e_id">
+        <div class="fld" style="margin-bottom:14px;"><label>Demandé par</label><input type="text" id="e_demandePar" required></div>
+        <div class="fld" style="margin-bottom:14px;"><label>Intention</label><textarea id="e_intention" required></textarea></div>
+        <div class="fld" style="margin-bottom:14px;"><label>Date de messe</label><input type="date" id="e_dateMesse" required></div>
+        <div class="fld" style="margin-bottom:14px;"><label>Montant</label><input type="number" id="e_montant" required></div>
+        <div class="fld" style="margin-bottom:14px;"><label>État</label>
+          <select id="e_etat">
+            <option value="En attente">En attente</option>
+            <option value="Validée">Validée</option>
+            <option value="Non validée">Non validée</option>
+          </select>
+        </div>
+        <div class="form-actions">
+          <button type="button" class="btn btn-outline" id="deleteFromEditBtn">Supprimer</button>
+          <button type="submit" class="btn btn-primary">Enregistrer</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6L9 17l-5-5"/></svg><span id="toastMsg"></span></div>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="app.js"></script>
+</body>
+</html> 
