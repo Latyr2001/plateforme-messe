@@ -3,7 +3,7 @@
 // ---------------------------------------------------------------
 const SUPABASE_URL = "https://irsugdjotbumcuvzxdwn.supabase.co";
 const SUPABASE_KEY = "sb_publishable_3fj8r5ijfyhD7rPQGVMwTg__fi1IF3x";
-const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+const sb = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
 const TABLE = "demandes_messe";
 
 // ---------------------------------------------------------------
@@ -65,7 +65,7 @@ function mapRow(row){
 }
 
 async function loadRequests(){
-  const { data, error } = await supabase
+  const { data, error } = await sb
     .from(TABLE)
     .select('*')
     .order('date_declaration', { ascending: false });
@@ -286,7 +286,7 @@ document.getElementById('editForm').addEventListener('submit', async e=>{
     montant: parseInt(document.getElementById('e_montant').value) || 0,
     etat: document.getElementById('e_etat').value,
   };
-  const { error } = await supabase.from(TABLE).update(updated).eq('id', id);
+  const { error } = await sb.from(TABLE).update(updated).eq('id', id);
   if(error){
     showToast("Erreur : " + error.message);
     return;
@@ -298,7 +298,7 @@ document.getElementById('editForm').addEventListener('submit', async e=>{
 
 document.getElementById('deleteFromEditBtn').addEventListener('click', async ()=>{
   const id = parseInt(document.getElementById('e_id').value);
-  const { error } = await supabase.from(TABLE).delete().eq('id', id);
+  const { error } = await sb.from(TABLE).delete().eq('id', id);
   if(error){
     showToast("Erreur : " + error.message);
     return;
@@ -319,7 +319,7 @@ document.getElementById('newRequestForm').addEventListener('submit', async e=>{
     montant: parseInt(document.getElementById('f_montant').value) || 0,
     etat: document.getElementById('f_etat').value,
   };
-  const { error } = await supabase.from(TABLE).insert(newReq);
+  const { error } = await sb.from(TABLE).insert(newReq);
   if(error){
     showToast("Erreur : " + error.message);
     return;
