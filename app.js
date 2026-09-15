@@ -347,4 +347,4 @@ function showToast(msg){
   toastTimer = setTimeout(()=>t.classList.remove('show'), 2600);
 }
 
-loadRequests(); 
+loadRequests();
