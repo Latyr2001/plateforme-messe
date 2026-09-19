@@ -24,7 +24,7 @@
     </div>
     <div class="brand-motto">« Une seule foi, une seule famille »</div>
     <nav class="nav" id="navList">
-      <div class="nav-item" data-view="accueil">
+      <div class="nav-item active" data-view="accueil">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h14V10"/></svg>
         Accueil
       </div>
@@ -35,10 +35,6 @@
       <div class="nav-item" data-view="registre">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="3" width="16" height="18" rx="2"/><path d="M8 8h8M8 12h8M8 16h5"/></svg>
         Registre des demandes
-      </div>
-      <div class="nav-item active" data-view="accueil">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><path d="M4 10h16M9 4v16"/></svg>
-        Intention de messe
       </div>
       <div class="nav-item" data-view="imprimer">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
@@ -67,13 +63,6 @@
         <h1>Plate-forme de demandes de messe</h1>
         <p class="sub">Paroisse Épiphanie du Seigneur de Nianing</p>
         <p class="tag">Prier ensemble, bâtir la communauté</p>
-      </div>
-      <div class="topbar-right">
-        <div class="avatar">
-          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 4-6 8-6s8 2 8 6"/></svg>
-        </div>
-        <span>Admin</span>
-        <svg viewBox="0 0 24 24" width="12" height="12" fill="none" stroke="#fff" stroke-width="2"><polyline points="6 9 12 15 18 9"/></svg>
       </div>
     </div>
 
@@ -171,7 +160,7 @@
               <table>
                 <thead>
                   <tr>
-                    <th>N°</th><th>Demandé par</th><th>Intention</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th>
+                    <th>N°</th><th>Intention</th><th>Demandé par</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th>
                   </tr>
                 </thead>
                 <tbody id="tableBody"></tbody>
@@ -180,7 +169,7 @@
             <div class="info-note">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
               <div>
-                La feuille pour le prêtre contient uniquement la colonne « Demandé par » et « Intention ».<br>
+                La feuille pour le prêtre contient uniquement la colonne « Intention » et « Demandé par ».<br>
                 Elle peut être imprimée à tout moment pour la journée en cours.
               </div>
             </div>
@@ -194,7 +183,7 @@
               </div>
             </div>
             <div class="print-panel-body" style="padding-top:0;">
-              <p>Sélectionnez la date pour imprimer la liste des intentions de messe (Demandé par en premier).</p>
+              <p>Sélectionnez la date pour imprimer la liste des intentions de messe (Intention en premier).</p>
               <div class="field">
                 <label>Date</label>
                 <select id="sideDateSelect" style="width:100%;"></select>
@@ -213,7 +202,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
             </div>
             <h3>Aperçu de la feuille à imprimer pour le prêtre</h3>
-            <div class="sub">(uniquement Demandé par et Intention)</div>
+            <div class="sub">(uniquement Intention et Demandé par)</div>
             <div class="arrow">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </div>
@@ -232,7 +221,7 @@
             <h2 class="title">INTENTIONS DE MESSE</h2>
             <div class="date" id="sheetDate"></div>
             <table>
-              <thead><tr><th>N°</th><th>Demandé par</th><th>Intention</th></tr></thead>
+              <thead><tr><th>N°</th><th>Intention</th><th>Demandé par</th></tr></thead>
               <tbody id="sheetBody"></tbody>
             </table>
             <div class="footer-quote">Que ces intentions soient portées par la prière de toute la communauté !</div>
@@ -290,7 +279,7 @@
           <div style="overflow-x:auto;">
             <table>
               <thead>
-                <tr><th>N°</th><th>Demandé par</th><th>Intention</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th></tr>
+                <tr><th>N°</th><th>Intention</th><th>Demandé par</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th></tr>
               </thead>
               <tbody id="tableBodyFull"></tbody>
             </table>
@@ -320,7 +309,7 @@
             </div>
             <h2 class="title">INTENTIONS DE MESSE</h2>
             <div class="date" id="sheetDateToday"></div>
-            <table><thead><tr><th>N°</th><th>Demandé par</th><th>Intention</th></tr></thead><tbody id="sheetBodyToday"></tbody></table>
+            <table><thead><tr><th>N°</th><th>Intention</th><th>Demandé par</th></tr></thead><tbody id="sheetBodyToday"></tbody></table>
             <div class="footer-quote">Que ces intentions soient portées par la prière de toute la communauté !</div>
             <div class="divider"><span class="ln"></span>✝<span class="ln"></span></div>
           </div>

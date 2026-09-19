@@ -104,8 +104,8 @@ function renderTable(targetEl, term){
   targetEl.innerHTML = list.map((r,i)=>`
     <tr>
       <td class="col-num">${i+1}</td>
-      <td>${escapeHtml(r.demandePar)}</td>
       <td>${escapeHtml(r.intention)}</td>
+      <td>${escapeHtml(r.demandePar)}</td>
       <td>${fmtShort(r.dateDeclaration)}</td>
       <td class="col-amount">${fmtMoney(r.montant)}</td>
       <td>${badgeFor(r.etat)}</td>
@@ -141,7 +141,7 @@ function renderSheet(){
     return;
   }
   sheetBody.innerHTML = list.map((r,i)=>`
-    <tr><td>${i+1}</td><td class="name">${escapeHtml(r.demandePar)}</td><td>${escapeHtml(r.intention)}</td></tr>
+    <tr><td>${i+1}</td><td class="name">${escapeHtml(r.intention)}</td><td>${escapeHtml(r.demandePar)}</td></tr>
   `).join('');
 }
 
@@ -154,7 +154,7 @@ function renderToday(){
     body.innerHTML = `<tr><td colspan="3" class="empty-print">Aucune intention enregistrée pour aujourd'hui.</td></tr>`;
     return;
   }
-  body.innerHTML = list.map((r,i)=>`<tr><td>${i+1}</td><td class="name">${escapeHtml(r.demandePar)}</td><td>${escapeHtml(r.intention)}</td></tr>`).join('');
+  body.innerHTML = list.map((r,i)=>`<tr><td>${i+1}</td><td class="name">${escapeHtml(r.intention)}</td><td>${escapeHtml(r.demandePar)}</td></tr>`).join('');
 }
 
 function renderAll(){
@@ -347,4 +347,4 @@ function showToast(msg){
   toastTimer = setTimeout(()=>t.classList.remove('show'), 2600);
 }
 
-loadRequests();
+loadRequests(); 
