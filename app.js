@@ -250,7 +250,7 @@ window.viewDetail = function(id){
   const r = requests.find(x=>x.id===id);
   if(!r) return;
   document.getElementById('detailModalBody').innerHTML = `
-    <div class="detail-row"><span class="k">Demandé par</span><span class="v">${escapeHtml(r.demandePar)}</span></div>
+    <div class="detail-row"><span class="k">Demandée par</span><span class="v">${escapeHtml(r.demandePar)}</span></div>
     <div class="detail-row"><span class="k">Intention</span><span class="v">${escapeHtml(r.intention)}</span></div>
     <div class="detail-row"><span class="k">Date de messe</span><span class="v">${capitalize(fmtLong(r.dateMesse))}</span></div>
     <div class="detail-row"><span class="k">Date de déclaration</span><span class="v">${fmtShort(r.dateDeclaration)}</span></div>

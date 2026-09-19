@@ -160,7 +160,7 @@
               <table>
                 <thead>
                   <tr>
-                    <th>N°</th><th>Intention</th><th>Demandé par</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th>
+                    <th>N°</th><th>Intention</th><th>Demandée par</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th>
                   </tr>
                 </thead>
                 <tbody id="tableBody"></tbody>
@@ -169,7 +169,7 @@
             <div class="info-note">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v4h1"/></svg>
               <div>
-                La feuille pour le prêtre contient uniquement la colonne « Intention » et « Demandé par ».<br>
+                La feuille pour le prêtre contient uniquement la colonne « Intention » et « Demandée par ».<br>
                 Elle peut être imprimée à tout moment pour la journée en cours.
               </div>
             </div>
@@ -202,7 +202,7 @@
               <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/></svg>
             </div>
             <h3>Aperçu de la feuille à imprimer pour le prêtre</h3>
-            <div class="sub">(uniquement Intention et Demandé par)</div>
+            <div class="sub">(uniquement Intention et Demandée par)</div>
             <div class="arrow">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
             </div>
@@ -215,16 +215,16 @@
               </div>
               <div>
                 <div class="parish">Paroisse Épiphanie du Seigneur de Nianing</div>
-                <div class="motto">« Une seule foi, une seule famille »</div>
+                <div class="motto">« Avec le Christ, avançons au large »</div>
               </div>
             </div>
             <h2 class="title">INTENTIONS DE MESSE</h2>
             <div class="date" id="sheetDate"></div>
             <table>
-              <thead><tr><th>N°</th><th>Intention</th><th>Demandé par</th></tr></thead>
+              <thead><tr><th>N°</th><th>Intention</th><th>Demandée par</th></tr></thead>
               <tbody id="sheetBody"></tbody>
             </table>
-            <div class="footer-quote">Que ces intentions soient portées par la prière de toute la communauté !</div>
+            <div class="footer-quote">À ces intentions, joignons les nôtres et prions les uns pour les autres.</div>
             <div class="divider"><span class="ln"></span>✝<span class="ln"></span></div>
           </div>
         </div>
@@ -237,7 +237,7 @@
         <div class="form-card">
           <form id="newRequestForm">
             <div class="form-grid">
-              <div class="fld"><label>Demandé par</label><input type="text" id="f_demandePar" placeholder="Nom du fidèle" required></div>
+              <div class="fld"><label>Demandée par</label><input type="text" id="f_demandePar" placeholder="Nom du fidèle" required></div>
               <div class="fld"><label>Date de messe souhaitée</label><input type="date" id="f_dateMesse" required></div>
               <div class="fld full"><label>Intention</label><textarea id="f_intention" placeholder="Ex. Repos de l'âme de..." required></textarea></div>
               <div class="fld"><label>Montant (FCFA)</label><input type="number" id="f_montant" placeholder="0" min="0" required></div>
@@ -279,7 +279,7 @@
           <div style="overflow-x:auto;">
             <table>
               <thead>
-                <tr><th>N°</th><th>Intention</th><th>Demandé par</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th></tr>
+                <tr><th>N°</th><th>Intention</th><th>Demandée par</th><th>Date de déclaration</th><th>Montant</th><th>État</th><th>Actions</th></tr>
               </thead>
               <tbody id="tableBodyFull"></tbody>
             </table>
@@ -304,13 +304,13 @@
               <div class="mark"><svg viewBox="0 0 24 24" fill="none" stroke="#c9973e" stroke-width="1.8"><path d="M12 2v20M7 7h10"/><path d="M4 20c1.5-3 4-4 8-4s6.5 1 8 4"/></svg></div>
               <div>
                 <div class="parish">Paroisse Épiphanie du Seigneur de Nianing</div>
-                <div class="motto">« Une seule foi, une seule famille »</div>
+                <div class="motto">« Avec le Christ, avançons au large »</div>
               </div>
             </div>
             <h2 class="title">INTENTIONS DE MESSE</h2>
             <div class="date" id="sheetDateToday"></div>
-            <table><thead><tr><th>N°</th><th>Intention</th><th>Demandé par</th></tr></thead><tbody id="sheetBodyToday"></tbody></table>
-            <div class="footer-quote">Que ces intentions soient portées par la prière de toute la communauté !</div>
+            <table><thead><tr><th>N°</th><th>Intention</th><th>Demandée par</th></tr></thead><tbody id="sheetBodyToday"></tbody></table>
+            <div class="footer-quote">À ces intentions, joignons les nôtres et prions les uns pour les autres.</div>
             <div class="divider"><span class="ln"></span>✝<span class="ln"></span></div>
           </div>
         </div>
@@ -374,7 +374,7 @@
     <div class="modal-body">
       <form id="editForm">
         <input type="hidden" id="e_id">
-        <div class="fld" style="margin-bottom:14px;"><label>Demandé par</label><input type="text" id="e_demandePar" required></div>
+        <div class="fld" style="margin-bottom:14px;"><label>Demandée par</label><input type="text" id="e_demandePar" required></div>
         <div class="fld" style="margin-bottom:14px;"><label>Intention</label><textarea id="e_intention" required></textarea></div>
         <div class="fld" style="margin-bottom:14px;"><label>Date de messe</label><input type="date" id="e_dateMesse" required></div>
         <div class="fld" style="margin-bottom:14px;"><label>Montant</label><input type="number" id="e_montant" required></div>
